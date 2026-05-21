@@ -1,0 +1,1 @@
+/home/darka/aether/target/debug/aether: /home/darka/aether/build.rs /home/darka/aether/proto /home/darka/aether/proto/aether.proto /home/darka/aether/src/main.rs /home/darka/aether/target/debug/build/aether-ae7ffbb78c89e73a/out/aether.rs
