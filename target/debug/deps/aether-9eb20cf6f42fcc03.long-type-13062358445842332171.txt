@@ -1,1 +1,0 @@
-tonic::codegen::Service<tonic::codegen::http::request::Request<tonic::transport::Body>>
