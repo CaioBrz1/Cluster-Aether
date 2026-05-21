@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # Aether: High-Performance Distributed Systems Core
 
 O Aether é um runtime de orquestração e computação distribuída de baixa latência escrito em Rust. O sistema utiliza Protocol Buffers (Protobuf) sobre transporte gRPC (HTTP/2 Multiplexed) para estabelecer um protocolo de comunicação fortemente tipado, assíncrono e de alto alinhamento de memória entre os nós do cluster (Master/Workers).
@@ -13,12 +12,12 @@ A integridade das interfaces de rede do cluster é garantida em tempo de compila
 
 ```mermaid
 graph TD
-    subgraph Compile-Time (Source & Codegen)
+    subgraph "Compile-Time (Source & Codegen)"
         IDL[proto/*.proto] -->|Define IPC Contracts| BR[build.rs]
         BR -->|Prost / Tonic Compiler| Native[Generated Rust Types & gRPC Stubs]
     end
 
-    subgraph Runtime (Aether Nodes Topology)
+    subgraph "Runtime (Aether Nodes Topology)"
         Master[Aether Master Node] <-->|gRPC Bidirectional Streams / HTTP/2| Worker1[Worker Node 01]
         Master <-->|gRPC Bidirectional Streams / HTTP/2| Worker2[Worker Node 02]
     end
