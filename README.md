@@ -10,7 +10,7 @@ Projetado para ambientes de infraestrutura crítica, o Aether elimina o overhead
 
 A integridade das interfaces de rede do cluster é garantida em tempo de compilação. O script de automação do Cargo (build.rs) intercepta o pipeline de build para compilar as definições agnósticas de IDL (.proto) usando geradores de código altamente otimizados (prost / tonic-build).
 
-```mermaid
+
 graph TD
     subgraph "Compile-Time (Source & Codegen)"
         IDL[proto/*.proto] -->|Define IPC Contracts| BR[build.rs]
